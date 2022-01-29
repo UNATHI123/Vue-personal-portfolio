@@ -1,7 +1,7 @@
 <template >
     <div>
        <div class="timeline">
-   <div class="container container-left">
+   <div class="container container-left ">
        <div class="image" style="background-image:url('https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')"></div>
        <div class="content">
          <span>September 2021 - Current</span>
@@ -46,7 +46,7 @@ export default {
     
 }
 </script>
-<style >
+<style scoped >
   @import url('https://fonts.googleapis.com/css?family=Noto+Sans:wght@400;700&display=swap');
 
 * {
@@ -119,20 +119,25 @@ body {
    top: 35px;
    width: 0;
    z-index: 1;
-   border: medium solid white;
+   border: medium solid crimson;
 }
+
 
 /*  The next two sections position the pointy connectors - check out CSS triangles using borders on CSS-Tricks for more info */
 .container-left .content::before {
    right: -10px;
    border-width: 10px 0 10px 10px;
-   border-color: transparent transparent transparent white;
+   border-color: transparent transparent transparent crimson;
 }
 
 .container-right .content::before {
    left: -10px;
    border-width: 10px 10px 10px 0;
-   border-color: transparent white transparent transparent;
+   border-color: transparent  transparent  crimson transparent;
+}
+.timeline::after{
+   background-color:crimson;
+ 
 }
 
 .image {
@@ -140,7 +145,7 @@ body {
    height:90px;
    background-size:cover;
    background-position:center;
-   border:solid 5px #ffffff;
+   border:solid 5px crimson;
    border-radius:50px;
    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
@@ -210,6 +215,7 @@ margin-top: 30px;
    top: 0px;
    margin-left: 0;
    margin-right: 0;
+   z-index: -1;
 }
 
 .container-left .content::before {

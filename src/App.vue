@@ -1,19 +1,39 @@
 <template>
+<div id="nav">
+ <ul class="nav justify-content-end">
+  <li class="nav-item">
+     <router-link to="/">Home</router-link> |
+      </li>
+  <li class="nav-item">
+     <router-link to="/about">About</router-link>|
+  </li>
+  <li class="nav-item">
+  <router-link to="/skills">Skills</router-link>|
+  </li>
+  <li class="nav-item">
+  <router-link to="/projects">Projects</router-link>|
+  </li>
 
-<div class="navBar">
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>|
-    <router-link to="/skills">Skills</router-link>|
-    <router-link to="/projects">Projects</router-link>|
-    <router-link to="/resume">Resume</router-link>|
-    <router-link to="/testimonials">Testimonials</router-link>|
-    <router-link to="/contact">Contact</router-link>
-  </div>
-</div>
+  <li class="nav-item">
+  <router-link to="/resume">Resume</router-link>|
+  </li>
+  <li class="nav-item">
+ <router-link to="/testimonials">Testimonials</router-link>||
+  </li>
+  <li class="nav-item">
+  <router-link to="/contact">Contact</router-link>
+  </li>
+</ul>     
+    </div>
 <router-view/>
 
 </template>
+<script>
+export default {
+  
+}
+</script>
+
 
 <style>
 #app {
@@ -22,6 +42,7 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+
 }
 
 #nav {
@@ -43,8 +64,6 @@
 
 }
 
-div.navBar {
- justify-content: end;
-}
+
 
 </style>

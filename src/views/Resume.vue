@@ -1,12 +1,14 @@
 <template>
     <div>
-        <Timeline /> 
+        <Timeline />
+        <Footer /> 
     </div>
 </template>
 <script>
 import Timeline from '../components/Timeline.vue'
+import Footer from '../components/Footer'
 export default {
-  components: { Timeline },
+  components: { Timeline, Footer },
 
 }
 </script>

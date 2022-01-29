@@ -1,6 +1,6 @@
 <template >
-    <div>
-       <footer class="fixed-bottom">
+    <div class="fixed-bottom">
+       <footer >
   <div class="copyright">
     <p> Copyright 2022 - Made with love by Unathi </p>
   </div>

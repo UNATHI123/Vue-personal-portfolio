@@ -5,7 +5,7 @@
      <h1 class="display-1">UNATHI QOLWENI</h1>
      <h4>Aspiring Web Developer based in Cape Town , Western Cape willing to relocate</h4>
     
-
+      
    </div>
    <Footer />
 </template>
@@ -18,7 +18,7 @@ export default {
 }
 </script>
 
-<style >
+<style scoped>
   img{
     border-radius: 150px;
     height: 300px;
