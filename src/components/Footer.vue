@@ -1,44 +1,41 @@
 <template >
-    <div class="fixed-bottom">
-       <footer >
-  <div class="copyright">
+
+  <div class="footer" >
+    <div class="copyright">
     <p> Copyright 2022 - Made with love by Unathi </p>
-  </div>
-  <div class="social">
-    <a href="#" class="support">Contact Me</a>
-    <a href="#" class="face">f</a>
-    <a href="#" class="tweet">t</a>
-    <a href="#" class="linked">in</a>
-  </div>
-</footer> 
     </div>
+    <div class="social">
+        <a href="#" class="support">Contact Me</a>
+        <a href="#" class="face">f</a>
+        <a href="#" class="tweet">t</a>
+        <a href="#" class="linked">in</a>
+     </div>
+  </div>
 </template>
 <script>
 export default {
     
 }
 </script>
-<style >
+<style scoped >
     @import url(https://fonts.googleapis.com/css?family=Raleway);
 /* Colors */
-* {
-  margin: 0;
-  padding: 0;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
 
-
-footer {
+.footer {
   width: 100%;
   display: inline-block;
-  margin: 2em 0;
   height: 70px;
   background-color:#2c3e50;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+
+ 
+
+
  
 }
-footer .copyright {
+.footer .copyright {
   width: 50%;
   float: left;
 
@@ -48,7 +45,7 @@ footer .copyright {
     width: 100%;
   }
 }
-footer .copyright p {
+ .copyright p {
   padding-left: 10%;
   color: white;
   font-size: 0.7em;
@@ -57,21 +54,21 @@ footer .copyright p {
   letter-spacing: 1px;
 }
 @media (max-width: 600px) {
-  footer .copyright p {
+ .copyright p {
     text-align: center;
     padding: 0;
   }
 }
-footer .social {
+.social {
   width: 25%;
   float: right;
 }
 @media (max-width: 600px) {
-  footer .social {
+ .social {
     width: 100%;
   }
 }
-footer .social a {
+ .social a {
   float: left;
   line-height: 70px;
   text-decoration: none;
@@ -83,7 +80,7 @@ footer .social a {
   -webkit-transition: all, 0.3s;
   transition: all, 0.3s;
 }
-footer .social a:hover {
+ .social a:hover {
   background-color: #222;
   -moz-transition: all, 0.3s;
   -o-transition: all, 0.3s;

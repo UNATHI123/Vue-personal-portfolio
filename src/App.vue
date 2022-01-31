@@ -1,30 +1,36 @@
 <template>
-<div id="nav">
- <ul class="nav justify-content-end">
-  <li class="nav-item">
-     <router-link to="/">Home</router-link> |
-      </li>
-  <li class="nav-item">
-     <router-link to="/about">About</router-link>|
-  </li>
-  <li class="nav-item">
-  <router-link to="/skills">Skills</router-link>|
-  </li>
-  <li class="nav-item">
-  <router-link to="/projects">Projects</router-link>|
-  </li>
-
-  <li class="nav-item">
-  <router-link to="/resume">Resume</router-link>|
-  </li>
-  <li class="nav-item">
- <router-link to="/testimonials">Testimonials</router-link>||
-  </li>
-  <li class="nav-item">
-  <router-link to="/contact">Contact</router-link>
-  </li>
-</ul>     
+<div id="nav" class="sticky-top">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Unathi Qolweni</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <router-link to="/">Home</router-link> 
+        </li>
+        <li class="nav-item">
+          <router-link to="/about">About</router-link>
+        </li>
+        <li class="nav-item">
+        <router-link to="/projects">Projects</router-link>
+        </li>
+        <li class="nav-item">
+            <router-link to="/resume">Resume</router-link>
+        </li>
+        <li class="nav-item">
+            <router-link to="/testimonials">Testimonials</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link to="/contact">Contact</router-link>
+        </li>
+      </ul>
     </div>
+  </div>
+</nav>
+</div>
 <router-view/>
 
 </template>
@@ -47,23 +53,21 @@ export default {
 
 #nav {
   padding: 30px;
-  margin-left: 700px;
- 
+  margin-left:200px ;
 }
 
 #nav a {
-  font-weight: bold;
-  color: #2c3e50;
-  text-decoration: none;
-  
-
+font-weight: bold;
+color: #2c3e50;
+text-decoration: none;
+padding: 10px;
+border-radius: 4px;
 }
 
 #nav a.router-link-exact-active {
-  color:crimson;
-
+color: white;
+background: crimson;
 }
-
 
 
 </style>

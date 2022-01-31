@@ -1,0 +1,10 @@
+{
+    "projects":[
+        {"id":1,"title":"Point of Sales Project", "details":"Vue Js", "image":""} ,  
+        {"id":2,"title":"Vue Calculator", "details":"Vue Js", "image":""},
+        {"id":3,"title":"Reaction Game", "details":"Vue Js", "image":""},
+        {"id":4,"title":"Array Crud", "details":"Vue Js", "image":""},
+        {"id":5,"title":"Mock Portfolio", "details":"Bootsrap", "image":""}
+
+    ]
+}

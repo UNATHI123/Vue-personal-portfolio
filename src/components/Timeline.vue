@@ -53,6 +53,7 @@ export default {
    margin: 0;
    padding: 0;
    box-sizing: border-box;
+   
 }
 
 body {
@@ -60,6 +61,7 @@ body {
    font-family: 'Noto Sans', sans-serif;
    font-size: 1em;
    color: #4A5568;
+  
 }
 
 .timeline {
@@ -127,16 +129,16 @@ body {
 .container-left .content::before {
    right: -10px;
    border-width: 10px 0 10px 10px;
-   border-color: transparent transparent transparent crimson;
+   border-color: transparent transparent transparent  #2c3e50;
 }
 
 .container-right .content::before {
    left: -10px;
    border-width: 10px 10px 10px 0;
-   border-color: transparent  transparent  crimson transparent;
+   border-color: transparent  transparent   #2c3e50 transparent;
 }
 .timeline::after{
-   background-color:crimson;
+   background-color: #2c3e50;
  
 }
 
@@ -145,9 +147,9 @@ body {
    height:90px;
    background-size:cover;
    background-position:center;
-   border:solid 5px crimson;
+   border:solid 5px  #2c3e50;
    border-radius:50px;
-   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+   box-shadow: 0 4px 6px -3px rgba(0, 0, 0, 0.1);
 }
 
 /* Set up the positioning for the images */
