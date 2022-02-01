@@ -1,8 +1,8 @@
 <template>
- <div>
+ <div class="container-fluid">
 <img src="../assets/Img/unathi.jpg"  alt="unathi">
    <h1>UNATHI QOLWENI</h1>
-    <p id="text"><em>...</em></p>
+    <p id="text"><em> An aspiring web developer, from Cape Town Western Cape</em></p>
     <div class="social-icons">
   <a class="social-icon social-icon--codepen">
     <i class="fa fa-codepen"></i>
@@ -19,7 +19,9 @@
   </a>
   </div>
  </div>
+ <div class="fixed-bottom">
    <Footer />
+ </div>
 </template>
 
 <script>
@@ -28,50 +30,6 @@ export default {
   components: {Footer},
  
 }
-function waitForMs(ms){
-  return new Promise((resolve) => setTimeout(resolve, ms));
-}
-async function deleteWord (){
-  let sentences = document.querySelector("#text").innerHTML;
-  console.log(sentences);
-  let words = sentences.split("");
-  console.log(words);
-
-  while (words.length > 0) {
-    await waitForMs(200);
-    words.pop();
-    document.querySelector("#text").innerHTML = words.join("");
-  }
-}
-async function WriteSentence(word) {
-  let words = word.split("");
-  console.log(words);
-
-  let intro =0;
-  while(intro < words.length){
-    await waitForMs(100);
-    document.querySelector("#text").append(words[intro]);
-  intro ++;
-  }
-}
-async function typingEffect(){
-  while(true){
-    await deleteWord();
-  await waitForMs(600);
-  await WriteSentence("Aspiring Web Developer");
-  await waitForMs(1600);
-  await deleteWord();
-  await waitForMs(600);
-  await WriteSentence("based in Cape Town , Western Cape");
-  await waitForMs(1600);
-   await deleteWord();
-  await waitForMs(600);
-  await WriteSentence("Willing to relocate");
-  await waitForMs(1600);
-  }
-}
-typingEffect();
-
 </script>
 
 <style scoped>
@@ -83,20 +41,17 @@ typingEffect();
   h1{
     font-weight: bolder;
   }
- 
-body {
+.social-icons {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
+ margin-left: 500px;
 }
-
+/* 
 /* Color Variables */
 /* Social Icon Mixin */
 /* Social Icons */
-.social-icons {
+/* .social-icons {
   display: flex;
-}
+} */ 
 
 .social-icon {
   display: flex;
@@ -235,5 +190,8 @@ body {
   border-width: 10px 10px 0 10px;
   border-color: transparent;
   transform: translate(-50%, 100%);
-}
+} 
+ @media screen {
+  
+ }
 </style>

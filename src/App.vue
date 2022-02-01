@@ -53,7 +53,12 @@ export default {
 
 #nav {
   padding: 30px;
-  margin-left:200px ;
+  /* margin-left:200px ; */
+  width: 100%;
+  height: 100%;
+  align-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
 #nav a {
@@ -67,6 +72,7 @@ border-radius: 4px;
 #nav a.router-link-exact-active {
 color: white;
 background: crimson;
+align-items: center;
 }
 
 
