@@ -5,7 +5,7 @@
     <p> Copyright 2022 - Made with love by Unathi </p>
     </div>
     <div class="social">
-        <a href="#" class="support">Contact Me</a>
+        <a href="mailto:uqolweni@gmail.com" class="support">Contact Me</a>
         <a href="#" class="face">f</a>
         <a href="#" class="tweet">t</a>
         <a href="#" class="linked">in</a>

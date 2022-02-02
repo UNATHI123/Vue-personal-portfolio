@@ -1,5 +1,7 @@
 <template>
+
 <div id="nav" class="sticky-top">
+  <div class="container-fluid">
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Unathi Qolweni</a>
@@ -30,6 +32,7 @@
     </div>
   </div>
 </nav>
+</div>
 </div>
 <router-view/>
 

@@ -40,6 +40,11 @@ const routes = [
     name: 'contact',
      component: Contact
   },
+  {
+    path:'/all-projects',
+    redirect:'/projects'
+  },
+  
   
 ]
 

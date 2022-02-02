@@ -1,0 +1,11 @@
+{
+    "projects":[
+        {"id":1,"title":"Point of Sales Project", "details":"Vue Js", "img":"/home/lifechoices/UNATHI2/unathi-portfolio/src/assets/img-p/Screenshot 2022-02-02 at 15-56-12 Page Title.png","netlify-url":"https://wizardly-mayer-23a308.netlify.app/","github-url":"https://github.com/UNATHI123/POS.git"} ,  
+        {"id":2,"title":"Vue Calculator", "details":"Vue Js", "img-url":"" ,"netlify-url":"","github-url":"https://github.com/UNATHI123/VUECALC2.git"},
+        {"id":3,"title":"Reaction Game", "details":"Vue Js", "img-url":"" ,"netlify-url":"","github-url":"https://github.com/UNATHI123/Reaction-Game.git"},
+        {"id":4,"title":"BMI", "details":" Js", "img-url":"","netlify-url":"","github-url":""},
+        {"id":5,"title":"Mock Portfolio", "details":"Bootsrap","img-url":"","netlify-url":"","github-url":"https://github.com/UNATHI123/unathi.git"},
+        {"id":6,"title":"Flip Cards", "details":"HTML/CSS", "img-url":"","netlify-url":"","github-url":"https://github.com/UNATHI123/flip-cards.git"}
+       
+    ]
+}

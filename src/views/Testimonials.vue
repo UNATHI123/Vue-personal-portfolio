@@ -52,7 +52,7 @@
        <h1 class="text-shadow">Bongani Nomangola</h1>
     </div>
     <div class="back">
-       <h2>Angular</h2>
+       <h2>Collegue</h2>
        <p>Unathi is a vision-focused individual that is determined to learn more and gain more experience from her surroundings.She is dedicated to given assignments and strives to be the best that she can be.
           </p>
     </div>

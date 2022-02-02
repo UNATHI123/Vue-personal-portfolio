@@ -10,7 +10,9 @@
   </a>
   <a class="social-icon social-icon--github">
     <i class="fa fa-github"></i>
-    <div class="tooltip">Github</div>
+    <div class="tooltip">
+      <a href="https://github.com/UNATHI123/"></a> Github
+      </div>
   </a>
 
   <a class="social-icon social-icon--linkedin">
