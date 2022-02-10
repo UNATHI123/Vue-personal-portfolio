@@ -1,19 +1,20 @@
 <template>
-  <h1>Projects</h1>
+ <h1>Projects</h1>
 <div class="card-container">
 <div class="row row-cols-1 row-cols-md-3 g-4">
-    <div class="card"  v-for="project of projects" :key="project"> 
+    <div class="card"  v-for="project of projects" :key="project.id" > 
   <div class="col">
     <div class="card h-100">
-      <img src="{{project.img}}" class="card-img-top" alt="">
+      <img :src="project.img" class="card-img-top" alt="">
   <div class="card-body">
     <h5 class="card-title">{{project.title}}</h5>
     <p class="card-text">{{project.details}}</p>
       <button class="button type3">
     View Site
+    
   </button>
-   <button class="button type1">
-   View Github
+    <button class="button type1">
+    View Github
   </button>
   </div>
     </div>
@@ -31,8 +32,10 @@ export default {
             projects:[]
         }
     },
+
+
     mounted(){
-        fetch('http://localhost:3000/projects')
+        fetch('http://localhost:7100/projects')
         .then(res => res.json())
         .then(data => this.projects = data)
         .catch(err => console.log(err.message))
@@ -40,7 +43,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
     .project h2{
         background: white;
         padding: 20px;
@@ -56,8 +59,6 @@ export default {
     .project a{
         text-decoration: none;
     }
-
-
 
 
 .button {
@@ -140,5 +141,9 @@ export default {
   border-left-color: #435a6b;
   width: 100%;
   height: 100%;
+}
+img{
+  height: 300px;
+  width: 400px;
 }
 </style>

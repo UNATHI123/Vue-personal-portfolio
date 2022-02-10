@@ -11,22 +11,22 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <router-link to="/">Home</router-link> 
+          <router-link to="/"><i class="bi bi-house-heart"></i>Home</router-link> 
         </li>
         <li class="nav-item">
-          <router-link to="/about">About</router-link>
+          <router-link to="/about"><i class="bi bi-person-fill"></i>About</router-link>
         </li>
         <li class="nav-item">
-        <router-link to="/projects">Projects</router-link>
+        <router-link to="/projects"><i class="bi bi-award-fill"></i>Projects</router-link>
         </li>
         <li class="nav-item">
-            <router-link to="/resume">Resume</router-link>
+            <router-link to="/resume"><i class="bi bi-book-fill"></i>Resume</router-link>
         </li>
         <li class="nav-item">
-            <router-link to="/testimonials">Testimonials</router-link>
+            <router-link to="/testimonials"><i class="bi bi-building"></i>Testimonials</router-link>
         </li>
         <li class="nav-item">
-          <router-link to="/contact">Contact</router-link>
+          <router-link to="/contact"><i class="bi bi-person-lines-fill"></i>Contact</router-link>
         </li>
       </ul>
     </div>
@@ -62,6 +62,7 @@ export default {
   align-content: center;
   align-items: center;
   padding: 20px;
+
 }
 
 #nav a {
@@ -70,12 +71,15 @@ color: #2c3e50;
 text-decoration: none;
 padding: 10px;
 border-radius: 4px;
+margin-left: 40px;
+
 }
 
 #nav a.router-link-exact-active {
 color: white;
 background: crimson;
 align-items: center;
+
 }
 
 

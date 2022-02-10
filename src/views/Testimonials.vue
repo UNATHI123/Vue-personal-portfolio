@@ -5,8 +5,7 @@
 <!-- horizontal -->
 <div class="flip">
   <div class="front" style="background-image: url(https://i.postimg.cc/Rh8MTSLM/Zanele2-min.jpg)">
-       
-       <h1 class="text-shadow">Zanele Moni</h1>
+      <h1 class="text-shadow">Zanele Moni</h1>
     </div>
     <div class="back">
        <h2>Collegue</h2>
@@ -78,7 +77,13 @@
 
 import Footer from '../components/Footer'
 export default {
-    components:{ Footer}
+    components:{ Footer},
+     mounted(){
+        fetch('http://localhost:7100/testimonials')
+        .then(res => res.json())
+        .then(data => this.projects = data)
+        .catch(err => console.log(err.message))
+    }
 }
 </script>
 <style  scoped>

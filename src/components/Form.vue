@@ -1,32 +1,70 @@
 <template >
     
     <div class="container">  
-  <form id="contact" action="https://formspree.io/f/mzboerwb" target="_blank" method="post">
+  <form id="contact" @submit.prevent="handleSubmit">
     <h3>Quick Contact</h3>
     <h4>Get in touch today, and get reply within 24 hours!</h4>
     <fieldset>
-      <input placeholder="Your name" type="text" tabindex="1"  name="Your name" required autofocus>
+		<label>Your Name</label>
+      <input type="text"  name="Your name" v-model="text">
     </fieldset>
     <fieldset>
-      <input placeholder="Your Email Address" type="email" tabindex="2" name="Email" required>
+		<label>Email Address</label>
+      <input type="email"  v-model="email">
     </fieldset>
     <fieldset>
-      <input placeholder="Your Phone Number" type="tel" tabindex="3" name="phone number" required>
+		<label>Telephone</label>
+      <input type="tel"  v-model="tel" >
     </fieldset>
     <fieldset>
-      <textarea placeholder="Type your Message Here...." tabindex="5" name="msg" required></textarea>
+		<label>Your Message</label>
+      <textarea  v-model="textarea" ></textarea>
     </fieldset>
     <fieldset>
-      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+      <button name="submit" type="submit" id="contact-submit">Submit</button>
     </fieldset>
   </form>
- 
+  <p>{{ text }}</p>
+  <p>{{ email }}</p>
+  <p>{{ tel }}</p>
+  <p>{{ textarea }}</p>
   
 </div>
 </template>
 <script>
 export default {
-    
+ data(){
+	 return{
+		 text:"",
+		 email:"",
+		 tel:"",
+		 textarea:""
+		
+	 }
+ } ,
+ methods:{
+	handleSubmit(){
+   console.log(this.text,this.email,this.tel,this.textarea),
+
+    fetch('http://localhost:7000/contact', {
+  method: 'POST',
+  body: JSON.stringify({
+   text:  this.text,
+   email: this.email,
+   tel: this.tel,
+   textarea: this.textarea
+   }),
+  headers: {
+    'Content-type': 'application/json; charset=UTF-8',
+  },
+})
+  .then((response) => response.json())
+  .then((json) => alert(json.msg))
+  .catch((e)=>alert(e.msg));
+
+		
+	 },
+ }  
 }
 </script>
 <style  scoped>
@@ -50,6 +88,7 @@ body {
 	font-size: 12px;
 	line-height:30px;
 	color:#777;
+	margin-bottom:100px ;
 	
 }
 

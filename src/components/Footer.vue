@@ -24,11 +24,12 @@ export default {
 .footer {
   width: 100%;
   display: inline-block;
-  height: 70px;
+  height: 50px;
   background-color:#2c3e50;
   position: fixed;
   bottom: 0;
   left: 0;
+  
 
  
 

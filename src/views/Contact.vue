@@ -1,14 +1,16 @@
 <template >
     <div>
       <Form />
-       <Footer /> 
+
+  
+       <!-- <Footer />  -->
     </div>
 </template>
 <script>
 import Form from '../components/Form'
-import Footer from '../components/Footer.vue'
+// import Footer from '../components/Footer.vue'
 export default {
-  components: {Footer , Form },
+  components: {Form },
  
 }
 </script>
