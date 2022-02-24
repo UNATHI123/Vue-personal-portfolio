@@ -1,10 +1,9 @@
 <template>
-
-<div id="nav" class="sticky-top">
+    <div id="nav" class="sticky-top">
   <div class="container-fluid">
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Unathi Qolweni</a>
+    <a class="navbar-brand" href="#">UNATHI QOLWENI</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -33,10 +32,14 @@
   </div>
 </nav>
 </div>
-</div>
 <router-view/>
 
+
+</div>
+
 </template>
+
+
 <script>
 export default {
   
@@ -44,17 +47,12 @@ export default {
 </script>
 
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<style scoped>
 
-}
 
-#nav {
+
+@media only screen and (min-width: 992px) {
+  #nav {
   padding: 30px;
   /* margin-left:200px ; */
   width: 100%;
@@ -62,23 +60,26 @@ export default {
   align-content: center;
   align-items: center;
   padding: 20px;
-
+ background-color: teal
 }
 
 #nav a {
 font-weight: bold;
-color: #2c3e50;
+color: black;
+font-size:larger ;
 text-decoration: none;
 padding: 10px;
-border-radius: 4px;
+/* border-radius: 4px; */
 margin-left: 40px;
+
 
 }
 
 #nav a.router-link-exact-active {
 color: white;
-background: crimson;
+background:crimson;
 align-items: center;
+}
 
 }
 

@@ -1,4 +1,8 @@
-<template>
+<template><div class="container">
+ <div class="section-title">
+        <h2>Resume</h2>
+        <p>Education & Experiance</p>
+      </div>
     <div>
         <Timeline />
     </div>
@@ -10,7 +14,7 @@
                 <div class="card-block">
                     <h6 class="m-b-20">Life Choices Coding Academy</h6>
                     <h2 class="text-right"><span>021 696 4157</span></h2>
-                    <p class="m-b-0">Website<span class="f-right">www.lifechoices.co.za</span></p>
+                    <p class="m-b-0"><span class="f-right">lifechoices.co.za</span></p>
                 </div>
             </div>
         </div>
@@ -40,28 +44,28 @@
                 <div class="card-block">
                     <h6 class="m-b-20">Zwelodumo S.S.S</h6>
                     <h2 class="text-right"><span>475389952</span></h2>
-                    <p class="m-b-0">Postal Adress<span class="f-right"> P.O. Box 7481, Mthatha, 5099</span></p>
+                    <p class="m-b-0">Location<span class="f-right">Eastern Cape </span></p>
                 </div>
             </div>
         </div>
 	</div>
 </div>
+          </div>
     <div class="fixed-bottom">
         <Footer /> 
     </div>
 </template>
 <script>
 import Timeline from '../components/Timeline.vue'
-import Footer from '../components/Footer'
+
 export default {
-  components: { Timeline, Footer },
+  components: { Timeline },
 
 }
 </script>
 <style scoped>
-
 .order-card {
-    color: #fff;
+    color:black;
 }
 
 .bg-c-blue {
@@ -105,5 +109,39 @@ export default {
 
 .f-right {
     float: right;
+}
+.section-title h2 {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0;
+  line-height: 1px;
+  margin: 0 0 20px 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+.section-title h2::after {
+  content: "";
+  width: 120px;
+  height: 1px;
+  display: inline-block;
+  background: crimson;
+  margin: 4px 10px;
+  color: #fff;
+}
+.section-title p {
+  margin: 0;
+  margin: -15px 0 15px 0;
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  color:white;
+}
+@media only screen and (min-width: 992px) {
+  .container{
+    margin-top:40px; 
+  }
 }  
 </style>

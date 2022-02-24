@@ -18,7 +18,9 @@
                 <li>CSS</li>
                 <li>GIT</li>
                 <li>MYSQL</li>
-                <li>BOOSTRAP</li>
+                <li>Javascript</li>
+                <li>Node.JS</li>
+                <li>Vue.JS</li>
               </ul>
             </div>
             <div class="resume-item">
@@ -83,12 +85,12 @@ export default {
   font-weight: 700;
   margin-top: 20px;
   margin-bottom: 20px;
-  color: #2c3e50;
+  color:white;
 }
 .resume .resume-item {
   padding: 0 0 20px 20px;
   margin-top: -2px;
-  border-left: 2px solid #2c3e50;
+  border-left: 2px solid white;
   position: relative;
 }
 .resume .resume-item h4 {
@@ -97,7 +99,7 @@ export default {
   font-weight: 600;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
-  color: #2c3e50;
+  color: white;
   margin-bottom: 10px;
 }
 .resume .resume-item h5 {

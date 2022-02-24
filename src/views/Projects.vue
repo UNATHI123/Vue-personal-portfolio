@@ -1,5 +1,9 @@
 <template>
- <h1>Projects</h1>
+<div class="container">
+ <div class="section-title">
+        <h2>Projects</h2>
+        <p>my work</p>
+      </div>
 <div class="card-container">
 <div class="row row-cols-1 row-cols-md-3 g-4">
     <div class="card"  v-for="project of projects" :key="project.id" > 
@@ -9,19 +13,16 @@
   <div class="card-body">
     <h5 class="card-title">{{project.title}}</h5>
     <p class="card-text">{{project.details}}</p>
-      <button class="button type3">
-    View Site
+      <a class="button type3" :href="project.live" target="_blank">View Site</a>
+    <a class="button type1" :href="project.github" target="_blank">View Github</a>
     
-  </button>
-    <button class="button type1">
-    View Github
-  </button>
   </div>
     </div>
   </div>
   </div>
   </div>
 </div>
+  </div>
 
 </template>
 
@@ -35,10 +36,17 @@ export default {
 
 
     mounted(){
-        fetch('http://localhost:7100/projects')
+        fetch('https://unathi-api.herokuapp.com/projects')
         .then(res => res.json())
-        .then(data => this.projects = data)
+        .then(data => {
+          this.projects = data
+          console.log(data)
+          
+          })
         .catch(err => console.log(err.message))
+
+
+        
     }
 }
 </script>
@@ -72,7 +80,7 @@ export default {
   margin: 1em 0.8em;
 }
 .button.type1 {
-  color: #566473;
+  color: crimson;
 }
 .button.type1.type1::after, .button.type1.type1::before {
   content: "";
@@ -89,16 +97,16 @@ export default {
   right: 0;
   border-top-color: transparent;
   border-left-color: transparent;
-  border-bottom-color: #566473;
-  border-right-color: #566473;
+  border-bottom-color: yellow;
+  border-right-color: yellow;
 }
 .button.type1.type1::before {
   top: 0;
   left: 0;
   border-bottom-color: transparent;
   border-right-color: transparent;
-  border-top-color: #566473;
-  border-left-color: #566473;
+  border-top-color: yellow;
+  border-left-color: yellow;
 }
 .button.type1.type1:hover:after, .button.type1.type1:hover:before {
   width: 100%;
@@ -106,7 +114,7 @@ export default {
 }
 
 .button.type3 {
-  color: #435a6b;
+  color: crimson;
 }
 .button.type3.type3::after, .button.type3.type3::before {
   content: "";
@@ -123,27 +131,58 @@ export default {
   right: 0;
   border-top-color: transparent;
   border-left-color: transparent;
-  border-bottom-color: #435a6b;
-  border-right-color: #435a6b;
+  border-bottom-color:crimson;
+  border-right-color: crimson;
 }
 .button.type3.type3::before {
   top: 0;
   left: 0;
   border-bottom-color: transparent;
   border-right-color: transparent;
-  border-top-color: #435a6b;
-  border-left-color: #435a6b;
+  border-top-color: crimson;
+  border-left-color: crimson;
 }
 .button.type3.type3:hover:after, .button.type3.type3:hover:before {
-  border-bottom-color: #435a6b;
-  border-right-color: #435a6b;
-  border-top-color: #435a6b;
-  border-left-color: #435a6b;
+  border-bottom-color:crimson;
+  border-right-color: crimso;
+  border-top-color: crimson;
+  border-left-color:crimson;
   width: 100%;
   height: 100%;
 }
-img{
-  height: 300px;
-  width: 400px;
+
+
+.section-title h2 {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0;
+  line-height: 1px;
+  margin: 0 0 20px 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: crimson;
+  font-family: "Poppins", sans-serif;
+}
+.section-title h2::after {
+  content: "";
+  width: 120px;
+  height: 1px;
+  display: inline-block;
+  background: #4ceb95;
+  margin: 4px 10px;
+}
+.section-title p {
+  margin: 0;
+  margin: -15px 0 15px 0;
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  color:black;
+}
+@media only screen and (min-width: 992px) {
+  .container{
+    margin-top:40px; 
+  }
 }
 </style>

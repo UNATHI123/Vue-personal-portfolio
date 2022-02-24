@@ -1,199 +1,159 @@
 <template>
- <div class="container-fluid">
-<img src="../assets/Img/unathi.jpg"  alt="unathi">
-   <h1>UNATHI QOLWENI</h1>
-    <p id="text"><em> An aspiring web developer, from Cape Town Western Cape</em></p>
-    <div class="social-icons">
-  <a class="social-icon social-icon--codepen">
-    <i class="fa fa-codepen"></i>
-    <div class="tooltip">Codepen</div>
-  </a>
-  <a class="social-icon social-icon--github">
-    <i class="fa fa-github"></i>
-    <div class="tooltip">
-      <a href="https://github.com/UNATHI123/"></a> Github
+ <header id="header">
+    <div class="container">
+      <h1>UNATHI QOLWENI</h1>
+     <h2>I'm a passionate <span>web-developer</span> from Cape Town</h2>
+    
+      <div class="social-links">
+        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
       </div>
-  </a>
-
-  <a class="social-icon social-icon--linkedin">
-    <i class="fa fa-linkedin"></i>
-    <div class="tooltip">LinkedIn</div>
-  </a>
-  </div>
- </div>
- <div class="fixed-bottom">
-   <Footer />
- </div>
+    </div>
+</header>
 </template>
 
 <script>
-import Footer from '../components/Footer.vue'
 export default {
-  components: {Footer},
+
  
 }
 </script>
 
 <style scoped>
-  img{
-    border-radius: 150px;
-    height: 300px;
-    width: 300px;
-  }
-  h1{
-    font-weight: bolder;
-  }
-.social-icons {
-  display: flex;
- margin-left: 500px;
+template{
+  background-image: url("https://i.postimg.cc/wB81mzys/Snapchat-871611848.jpg");
+  background-size: cover;
+  opacity: 0.5;
 }
-/* 
-/* Color Variables */
-/* Social Icon Mixin */
-/* Social Icons */
-/* .social-icons {
-  display: flex;
-} */ 
-
-.social-icon {
-  display: flex;
-  align-items: center !important;
-  justify-content: center !important;
-  position: relative;
-  width: 80px;
-  height: 80px;
-  margin: 0 0.5rem;
-  border-radius: 50%;
-  cursor: pointer;
-  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  font-size: 2.5rem;
-  text-decoration: none;
-  transition: all 0.15s ease;
-}
-.social-icon:hover {
-  color: #fff;
-}
-.social-icon:hover .tooltip {
-  visibility: visible;
-  opacity: 1;
-  transform: translate(-50%, -150%);
-}
-.social-icon:active {
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5) inset;
-}
-.social-icon--linkedin {
-  background: #006599;
-  color: #fff;
-}
-.social-icon--linkedin .tooltip {
-  background: #006599;
-  color: currentColor;
-}
-.social-icon--linkedin .tooltip:after {
-  border-top-color: #006599;
-}
-.social-icon--twitter {
-  background: #2b97f1;
-  color: #fff;
-}
-.social-icon--twitter .tooltip {
-  background: #2b97f1;
-  color: currentColor;
-}
-.social-icon--twitter .tooltip:after {
-  border-top-color: #2b97f1;
-}
-.social-icon--codepen {
-  background: #000;
-  color: #fff;
-}
-.social-icon--codepen .tooltip {
-  background: #000;
-  color: currentColor;
-}
-.social-icon--codepen .tooltip:after {
-  border-top-color: #000;
-}
-.social-icon--facebook {
-  background: #3b5a9b;
-  color: #fff;
-}
-.social-icon--facebook .tooltip {
-  background: #3b5a9b;
-  color: currentColor;
-}
-.social-icon--facebook .tooltip:after {
-  border-top-color: #3b5a9b;
-}
-.social-icon--instagram {
-  background: #527fa6;
-  color: #fff;
-}
-.social-icon--instagram .tooltip {
-  background: #527fa6;
-  color: currentColor;
-}
-.social-icon--instagram .tooltip:after {
-  border-top-color: #527fa6;
-}
-.social-icon--dribbble {
-  background: #ef5a92;
-  color: #fff;
-}
-.social-icon--dribbble .tooltip {
-  background: #ef5a92;
-  color: currentColor;
-}
-.social-icon--dribbble .tooltip:after {
-  border-top-color: #ef5a92;
-}
-.social-icon--github {
-  background: #4284c0;
-  color: #fff;
-}
-.social-icon--github .tooltip {
-  background: #4284c0;
-  color: currentColor;
-}
-.social-icon--github .tooltip:after {
-  border-top-color: #4284c0;
-}
-.social-icon i {
-  position: relative;
-  top: 1px;
+img{
+ display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* Tooltips */
-.tooltip {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  padding: 0.8rem 1rem;
-  border-radius: 40px;
-  font-size: 0.8rem;
-  font-weight: bold;
-  opacity: 0;
-  pointer-events: none;
-  text-transform: uppercase;
-  transform: translate(-50%, -100%);
-  transition: all 0.3s ease;
-  z-index: 1;
+#header {
+  transition: ease-in-out 0.3s;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  z-index: 997;
+  overflow-y: auto;
+ 
 }
-.tooltip:after {
-  display: block;
-  position: absolute;
-  bottom: 1px;
-  left: 50%;
-  width: 0;
-  height: 0;
-  content: "";
-  border: solid;
-  border-width: 10px 10px 0 10px;
-  border-color: transparent;
-  transform: translate(-50%, 100%);
-} 
- @media screen {
+#header * {
+  transition: ease-in-out 0.3s;
+}
+#header h1 {
+  font-size: 48px;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
   
- }
+}
+#header h1 a, #header h1 a:hover {
+  color:black;
+  line-height: 1;
+  display: inline-block;
+}
+#header h2 {
+  font-size: 24px;
+  margin-top: 20px;
+  color:black;
+}
+#header h2 span {
+  color:black;
+  border-bottom: 2px solid crimson;
+  padding-bottom: 6px;
+}
+
+#header .social-links {
+  margin-top: 40px;
+  display: flex;
+}
+#header .social-links a {
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  color:black;
+  line-height: 1;
+  margin-right: 8px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+#header .social-links a:hover {
+  background: crimson;
+}
+@media (max-width: 992px) {
+  #header h1 {
+    font-size: 36px;
+  }
+  #header h2 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  #header .social-links {
+    margin-top: 15px;
+  }
+  #header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Header Top */
+#header.header-top {
+  height: 100px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  
+
+}
+#header.header-top .social-links, #header.header-top h2 {
+  display: none;
+}
+#header.header-top h1 {
+  margin-right: auto;
+  font-size: 36px;
+}
+#header.header-top .container {
+  display: flex;
+  align-items: center;
+}
+#header.header-top .navbar {
+  margin: 0;
+}
+@media (max-width: 768px) {
+  #header.header-top {
+    height: 60px;
+    margin-top: auto;
+  }
+  #header.header-top h1 {
+    font-size: 26px;
+  }
+  #header {
+ top: -130px;
+}
+
+}
+
+img{
+  width: 300px;
+  height: 300px;
+
+
+}
+
+  
+
 </style>
